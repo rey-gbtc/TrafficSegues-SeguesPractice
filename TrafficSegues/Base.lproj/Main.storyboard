@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Red-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,13 +31,15 @@
                             <constraint firstItem="00o-0i-7rs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i9I-RP-cGS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b3o-8h-zqS"/>
+                    <navigationItem key="navigationItem" title="Red" id="b3o-8h-zqS">
+                        <barButtonItem key="backBarButtonItem" title="Go To Red" id="YQD-Lx-Lyf"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="116.58767772511848"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow-->
         <scene sceneID="pPp-V9-h5J">
             <objects>
                 <viewController id="Uhk-EP-Uou" sceneMemberID="viewController">
@@ -60,33 +62,33 @@
                             <constraint firstItem="MCE-9e-L8e" firstAttribute="centerY" secondItem="cee-z6-baA" secondAttribute="centerY" id="S5f-i3-bi5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Wpg-Vk-smK"/>
+                    <navigationItem key="navigationItem" title="Yellow" id="Wpg-Vk-smK">
+                        <barButtonItem key="backBarButtonItem" title="Back To Yellow" id="fXX-B1-Ehj"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14J-K8-vnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1930.7692307692307" y="116.58767772511848"/>
         </scene>
-        <!--View Controller-->
+        <!--Green-->
         <scene sceneID="scb-ZP-acf">
             <objects>
                 <viewController id="JmW-tv-fdo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NXn-1M-iAk">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jR-sy-L0d">
-                                <rect key="frame" x="168" y="380" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <segue destination="Ktk-D7-TeQ" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="nBa-Ar-hzb"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mWf-6u-o5S"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vUT-VO-iGG"/>
+                    <navigationItem key="navigationItem" title="Green" id="vUT-VO-iGG">
+                        <barButtonItem key="backBarButtonItem" title="Back to Green" id="98f-CT-hfc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Pop" id="2Vi-r2-kOG">
+                            <color key="tintColor" systemColor="systemBlueColor"/>
+                            <connections>
+                                <segue destination="Ktk-D7-TeQ" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="TcL-wA-CMn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cra-sQ-WY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ktk-D7-TeQ" userLabel="Exit" sceneMemberID="exit"/>
@@ -113,6 +115,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
